@@ -1,0 +1,98 @@
+@mixin btn($type, $type-compliment) {
+  border-color: $type;
+  background-color: $type;
+  color: $type-compliment;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($type, 15%);
+    border-color: darken($type, 15%);
+  }
+}
+
+@mixin outline-btn($type, $type-compliment) {
+  border-color: $type;
+  background-color: transparent;
+  color: $type;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $type;
+    color: $type-compliment;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: .375rem .75rem;
+  border: 1px solid;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: $border-radius;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+}
+
+.btn-primary {
+  @include btn($primary, $primary-compliment);
+}
+
+.btn-secondary {
+  @include btn($secondary, $secondary-compliment);
+}
+
+.btn-success {
+  @include btn($success, $success-compliment);
+}
+
+.btn-info {
+  @include btn($info, $info-compliment);
+}
+
+.btn-warning {
+  @include btn($warning, $warning-compliment);
+}
+
+.btn-danger {
+  @include btn($danger, $danger-compliment);
+}
+
+.btn-link {
+  @include btn(transparent, $primary);
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.btn-outline-primary {
+  @include outline-btn($primary, $primary-compliment);
+}
+
+.btn-outline-secondary {
+  @include outline-btn($secondary, $secondary-compliment);
+}
+
+.btn-outline-success {
+  @include outline-btn($success, $success-compliment);
+}
+
+.btn-outline-info {
+  @include outline-btn($info, $info-compliment);
+}
+
+.btn-outline-warning {
+  @include outline-btn($warning, $warning-compliment);
+}
+
+.btn-outline-danger {
+  @include outline-btn($danger, $danger-compliment);
+}

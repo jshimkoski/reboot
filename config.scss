@@ -1,0 +1,33 @@
+@import '@/assets/colors.scss';
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$reboot-body-bg-color: $white !default;
+$reboot-font-color: $gray-900 !default;
+$reboot-link-color: $blue !default;
+$reboot-link-hover-color: $blue-800 !default;
+$reboot-caption-color: $gray !default;
+
+$primary: $blue !default;
+$primary-compliment: $white !default;
+
+$secondary: $gray !default;
+$secondary-compliment: $white !default;
+
+$success: $green !default;
+$success-compliment: $white !default;
+
+$info: $cyan !default;
+$info-compliment: $white !default;
+
+$warning: $yellow-900 !default;
+$warning-compliment: $white !default;
+
+$danger: $red !default;
+$danger-compliment: $white !default;
+
+$border-radius: .25rem;
+
+@import '@/assets/breakpoint.scss';
+@import '@/assets/buttons.scss';
